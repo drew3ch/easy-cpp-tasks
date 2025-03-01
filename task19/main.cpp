@@ -5,18 +5,16 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
     setlocale(LC_ALL, "rus");
-    cout << "\t\tПрограмма палиндром в С++\n" << endl;
+    std::cout << "\t\tПрограмма палиндром в С++\n" << std::endl;
 
     int a, b, c, e;
 
-    cout << "Введите пятизначное число:  ";
-    cin >> a;
-    cout << "\n\n";
+    std::cout << "Введите пятизначное число:  ";
+    std::cin >> a;
+    std::cout << "\n\n";
 
     if (a >= 9999 && a <= 100000)
     {
@@ -30,13 +28,13 @@ int main()
 
         if (b == a && c == e)
         {
-            cout << "Это число палиндром" << endl;;
+            std::cout << "Это число палиндром" << std::endl;;
         }
         else
-            cout << "Это число не палиндром" << endl;;
+            std::cout << "Это число не палиндром" << std::endl;;
     }
     else
-        cout << "Вы ввели не пятизначное число!!!";
+        std::cout << "Вы ввели не пятизначное число!!!";
     system("pause");
     return 0;
 }

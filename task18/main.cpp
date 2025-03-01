@@ -6,19 +6,17 @@
 #include <iostream>
 #include <iomanip> // Для использования манипуляторов
 
-using namespace std;
-
 int main() {
     setlocale(LC_ALL, "rus");
     int decimalNumber; // Переменная для хранения десятичного числа
 
     // Ввод числа
-    cout << "Введите число: ";
-    cin >> decimalNumber;
+    std::cout << "Введите число: ";
+    std::cin >> decimalNumber;
 
     // Вывод шестнадцатеричной формы записи числа
-    cout << "Шестнадцатеричная форма записи числа " << decimalNumber << " = 0x";
-    cout << hex << decimalNumber << endl; // Применение манипулятора hex
+    std::cout << "Шестнадцатеричная форма записи числа " << decimalNumber << " = 0x";
+    std::cout << hex << decimalNumber << std::endl; // Применение манипулятора hex
     system("pause");
     return 0;
 }

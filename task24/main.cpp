@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <cmath> // Для использования функции sin
-using namespace std;
 
 // Функция для вычисления суммы
 double calculateSum(int n) {
@@ -23,12 +22,12 @@ int main() {
     int n;
 
     // Ввод натурального числа n
-    cout << "Введите n: ";
-    cin >> n;
+    std::cout << "Введите n: ";
+    std::cin >> n;
 
     // Проверка на положительное значение n
     if (n <= 0) {
-        cout << "n должно быть натуральным числом!" << endl;
+        std::cout << "n должно быть натуральным числом!" << std::endl;
         return 1; // Завершение программы с ошибкой
     }
 
@@ -36,7 +35,7 @@ int main() {
     double result = calculateSum(n);
 
     // Вывод результата
-    cout << "Сумма = " << result << endl;
+    std::cout << "Сумма = " << result << std::endl;
 
     return 0; // Завершение программы
 }

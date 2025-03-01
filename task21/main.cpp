@@ -6,8 +6,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 struct Question {
     string question;        // Вопрос
     string answers[3];     // Варианты ответов
@@ -26,28 +24,28 @@ int main() {
 
     // Проход по вопросам
     for (int i = 0; i < numQuestions; ++i) {
-        cout << i + 1 << ") " << quiz[i].question << endl;
-        cout << "answers:" << endl;
+        std::cout << i + 1 << ") " << quiz[i].question << std::endl;
+        std::cout << "answers:" << std::endl;
         for (int j = 0; j < 3; ++j) {
-            cout << "-> " << quiz[i].answers[j] << endl;
+            std::cout << "-> " << quiz[i].answers[j] << std::endl;
         }
 
         int userAnswer;
-        cout << "your answer (enter 1, 2, or 3): ";
-        cin >> userAnswer;
+        std::cout << "your answer (enter 1, 2, or 3): ";
+        std::cin >> userAnswer;
 
         // Проверка ответа
         if (userAnswer - 1 == quiz[i].correctAnswer) {
-            cout << "Correct!" << endl;
+            std::cout << "Correct!" << std::endl;
             score++;
         } else {
-            cout << "Wrong! The correct answer is: " << quiz[i].answers[quiz[i].correctAnswer] << endl;
+            std::cout << "Wrong! The correct answer is: " << quiz[i].answers[quiz[i].correctAnswer] << std::endl;
         }
-        cout << endl; // Пустая строка для разделения вопросов
+        std::cout << std::endl; // Пустая строка для разделения вопросов
     }
 
     // Вывод результата
-    cout << "Rating = " << score << " ball(s)" << endl;
+    std::cout << "Rating = " << score << " ball(s)" << std::endl;
 
     return 0;
 }

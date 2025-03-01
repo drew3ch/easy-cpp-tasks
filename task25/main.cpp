@@ -3,15 +3,14 @@
 */
 
 #include <iostream>
-using namespace std;
- 
+
 int main(int argc, char* argv[])
 {
     int interval_numbers, // правая граница интервала чисел
         counter = 0; // левая граница интервала чисел
     setlocale(LC_ALL, "rus");
-    cout << "Введите правую границу интервала чисел: ";
-    cin >> interval_numbers;
+    std::cout << "Введите правую границу интервала чисел: ";
+    std::cin >> interval_numbers;
  
     int sum_numbers = 0; // сумма чисел нацело делящихся на 5
     while ( counter <= interval_numbers )
@@ -21,6 +20,6 @@ int main(int argc, char* argv[])
      counter++;
     }
  
-    cout << "Сумма чисел нацело делящихся на 5 = " << sum_numbers << endl;
+    std::cout << "Сумма чисел нацело делящихся на 5 = " << sum_numbers << std::endl;
     return 0;
 }

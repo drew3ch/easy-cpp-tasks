@@ -4,23 +4,21 @@
 
 #include <iostream>
 #include <cmath> // подключение библиотеки математических операций
-
-using namespace std;
  
 int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "rus");
-    cout << "Введите N: ";
+    std::cout << "Введите N: ";
     unsigned n, // последний элемент суммы
              k, // степень
              sum = 0; // алгебраическая сумма
-    cin >> n;
-    cout << "Введите степень к: ";
-    cin >> k;
+    std::cin >> n;
+    std::cout << "Введите степень к: ";
+    std::cin >> k;
  
     for (int counter = 1; counter <= n; counter++)
         sum += pow(counter, (float)k); // накапливаем сумму, согласно формуле
-    cout << "Сумма: " << sum << endl;
+    std::cout << "Сумма: " << sum << std::endl;
     system("pause");
     return 0;
 }

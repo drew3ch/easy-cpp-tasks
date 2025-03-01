@@ -5,16 +5,15 @@
 */
 
 #include <iostream>
-using namespace std;
 
 int main() {
     int numTriangles; // Переменная для хранения количества треугольников
-    cout << "Enter number of triangles (1-6): ";
-    cin >> numTriangles;
+    std::cout << "Enter number of triangles (1-6): ";
+    std::cin >> numTriangles;
 
     // Проверка на допустимый диапазон
     if (numTriangles < 1 || numTriangles > 6) {
-        cout << "Please enter a number between 1 and 6." << endl;
+        std::cout << "Please enter a number between 1 and 6." << std::endl;
         return 1; // Завершение программы с ошибкой
     }
 
@@ -27,16 +26,16 @@ int main() {
         for (int j = 0; j < numTriangles; j++) {
             // Печатаем пробелы перед треугольником
             for (int k = 0; k < height - i - 1; k++) {
-                cout << " ";
+                std::cout << " ";
             }
             // Печатаем звезды для треугольника
             for (int k = 0; k < 2 * i + 1; k++) {
-                cout << "*";
+                std::cout << "*";
             }
             // Печатаем пробел между треугольниками
-            cout << "  "; // два пробела между треугольниками
+            std::cout << "  "; // два пробела между треугольниками
         }
-        cout << endl; // Переход на следующую строку после печати всех треугольников в одной строке
+        std::cout << std::endl; // Переход на следующую строку после печати всех треугольников в одной строке
     }
 
     return 0; // Завершение программы

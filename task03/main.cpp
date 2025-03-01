@@ -4,23 +4,22 @@
 */
 
 #include <iostream>
-using namespace std;
 int main()
 {
     setlocale (LC_ALL, "RUS");
     int x;
     std::cout << "Введите двухзначное натуральное число меньше 99: " << "\n";
-    cin >> x; // ввод двухзначного натурального числа, меньше 99
+    std::cin >> x; // ввод двухзначного натурального числа, меньше 99
     int xf = x / 10;
     int xs = x % 10;
     if (xf > xs) {
-        cout << xf << " - большая цифра" << endl;
-        cout << xs << " - меньшая цифра" << endl;
+        std::cout << xf << " - большая цифра" << std::endl;
+        std::cout << xs << " - меньшая цифра" << std::endl;
     } else if (xs > xf) {
-        cout << xs << " - большая цифра" << endl;
-        cout << xf << " - меньшая цифра" << endl;
+        std::cout << xs << " - большая цифра" << std::endl;
+        std::cout << xf << " - меньшая цифра" << std::endl;
     } else {
-        cout << "цифры равны" << endl;
+        std::cout << "цифры равны" << std::endl;
     }
     return 0;
 }

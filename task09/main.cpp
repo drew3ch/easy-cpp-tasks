@@ -2,18 +2,17 @@
 
 #include <iostream>
 #include <cmath> // Для функции fabs
-using namespace std;
 
 int main() {
     int length;
 
     // Запрашиваем у пользователя длину массива
-    cout << "Введите длину массива: ";
-    cin >> length;
+    std::cout << "Введите длину массива: ";
+    std::cin >> length;
 
     // Проверка на корректность ввода
     if (length <= 0) {
-        cout << "Длина массива должна быть положительным числом!" << endl;
+        std::cout << "Длина массива должна быть положительным числом!" << std::endl;
         return 1; // Завершаем программу с ошибкой
     }
 
@@ -21,9 +20,9 @@ int main() {
     double* array = new double[length];
 
     // Запрашиваем у пользователя ввод элементов массива
-    cout << "Введите " << length << " элементов массива: ";
+    std::cout << "Введите " << length << " элементов массива: ";
     for (int i = 0; i < length; ++i) {
-        cin >> array[i];
+        std::cin >> array[i];
     }
 
     // Переменная для хранения суммы квадратов
@@ -37,7 +36,7 @@ int main() {
     }
 
     // Выводим результат
-    cout << "Сумма = " << sum_of_squares << endl;
+    std::cout << "Сумма = " << sum_of_squares << std::endl;
 
     // Освобождаем выделенную память
     delete[] array;

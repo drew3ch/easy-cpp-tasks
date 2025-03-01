@@ -4,18 +4,16 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main() {
     int number;
 
     // Ввод трехзначного числа
-    cout << "Введите трехзначное число: ";
-    cin >> number;
+    std::cout << "Введите трехзначное число: ";
+    std::cin >> number;
 
     // Проверка, что число трехзначное
     if (number < 100 || number > 999) {
-        cout << "Ошибка: число должно быть трехзначным." << endl;
+        std::cout << "Ошибка: число должно быть трехзначным." << std::endl;
         return 1; // Завершение программы с кодом ошибки
     }
 
@@ -26,9 +24,9 @@ int main() {
 
     // Проверка на одинаковые цифры
     if (first_digit == second_digit || first_digit == third_digit || second_digit == third_digit) {
-        cout << "Среди цифр введенного трехзначного числа " << number << " есть одинаковые." << endl;
+        std::cout << "Среди цифр введенного трехзначного числа " << number << " есть одинаковые." << std::endl;
     } else {
-        cout << "Среди цифр введенного трехзначного числа " << number << " нет одинаковых." << endl;
+        std::cout << "Среди цифр введенного трехзначного числа " << number << " нет одинаковых." << std::endl;
     }
 
     return 0;

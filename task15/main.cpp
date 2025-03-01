@@ -4,8 +4,6 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main() {
     // Переменные для размеров отверстия
     double holeLength, holeHeight;
@@ -13,12 +11,12 @@ int main() {
     double brickLength, brickWidth, brickHeight;
 
     // Ввод размеров отверстия
-    cout << "Введите размеры отверстия (длина и высота): ";
-    cin >> holeLength >> holeHeight;
+    std::cout << "Введите размеры отверстия (длина и высота): ";
+    std::cin >> holeLength >> holeHeight;
 
     // Ввод размеров кирпича
-    cout << "Введите размеры кирпича (длина, ширина и высота): ";
-    cin >> brickLength >> brickWidth >> brickHeight;
+    std::cout << "Введите размеры кирпича (длина, ширина и высота): ";
+    std::cin >> brickLength >> brickWidth >> brickHeight;
 
     // Проверка, пройдет ли кирпич через отверстие
     bool canPass = ( (brickLength <= holeLength && brickHeight <= holeHeight) ||
@@ -30,9 +28,9 @@ int main() {
 
     // Вывод результата
     if (canPass) {
-        cout << "Кирпич пройдет через отверстие." << endl;
+        std::cout << "Кирпич пройдет через отверстие." << std::endl;
     } else {
-        cout << "Кирпич не пройдет через отверстие." << endl;
+        std::cout << "Кирпич не пройдет через отверстие." << std::endl;
     }
 
     return 0;

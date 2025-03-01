@@ -3,18 +3,17 @@
 */
 
 #include <iostream>
-using namespace std;
  
 int main(int argc, char* argv[])
 {
     double number; // вводимое число
     setlocale(LC_ALL, "rus");
-    cout << "Введите число и нажмите <Enter> -> ";
-    cin >> number;
+    std::cout << "Введите число и нажмите <Enter> -> ";
+    std::cin >> number;
  
     if ( (number - int(number)) != 0 ) // если разность больше нуля, то введённое число - число с плавающей точкой
-        cout << "\nВведённое число не является целым!" << endl;
+        std::cout << "\nВведённое число не является целым!" << std::endl;
     else
-        cout << "Это целое число!\n";
+        std::cout << "Это целое число!\n";
     return 0;
 }

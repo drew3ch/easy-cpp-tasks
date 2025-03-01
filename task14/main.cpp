@@ -5,13 +5,11 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
     string line; // Для хранения каждой введенной строки
     int lineCount = 0; // Счетчик строк
 
-    cout << "Введите текст (для завершения ввода введите '#' на новой строке):" << endl;
+    std::cout << "Введите текст (для завершения ввода введите '#' на новой строке):" << std::endl;
 
     // Цикл для ввода строк
     while (true) {
@@ -26,7 +24,7 @@ int main() {
     }
 
     // Вывод количества строк
-    cout << "Количество строк в тексте: " << lineCount << endl;
+    std::cout << "Количество строк в тексте: " << lineCount << std::endl;
 
     return 0;
 }

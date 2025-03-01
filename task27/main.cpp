@@ -3,22 +3,22 @@
 */
 
 #include <iostream>
-using namespace std;
+
 int main()
 {
     setlocale (LC_ALL, "RUS");
     int chislo;
     cout<<"\t\t\tТаблица умножения введенного числа\n";
     cout<<"\t\t\t----------------------------------\n";
-    cout<<endl;
+    cout<<std::endl;
     cout<<"Введите число:  ";
     cin>>chislo;
-    cout<<endl;
+    cout<<std::endl;
     for (int j=1; j<=10; j++)
     {
-        cout<<j<<" * "<<chislo<<" = "<<j*chislo<<endl;
+        cout<<j<<" * "<<chislo<<" = "<<j*chislo<<std::endl;
  
     }
-    cout<<endl;
+    cout<<std::endl;
  return 0;
 }

@@ -6,8 +6,6 @@
 #include <vector>
 #include <iomanip> // Для std::setprecision
 
-using namespace std;
-
 class LCG {
 public:
     LCG(unsigned long seed) : x(seed) {}
@@ -29,8 +27,8 @@ private:
 
 int main() {
     unsigned long seed;
-    cout << "Введите начальное значение (семя): ";
-    cin >> seed;
+    std::cout << "Введите начальное значение (семя): ";
+    std::cin >> seed;
 
     LCG lcg(seed);
     vector<double> random_numbers;
@@ -41,11 +39,11 @@ int main() {
     }
 
     // Вывод результатов
-    cout << "Сгенерированные псевдослучайные числа: ";
+    std::cout << "Сгенерированные псевдослучайные числа: ";
     for (const auto& num : random_numbers) {
-        cout << fixed << setprecision(2) << num << " "; // Форматирование вывода
+        std::cout << fixed << setprecision(2) << num << " "; // Форматирование вывода
     }
-    cout << endl;
+    std::cout << std::endl;
 
     return 0;
 }

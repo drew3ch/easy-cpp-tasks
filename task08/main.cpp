@@ -7,7 +7,6 @@ m от 1 до 5 с шагом 1.
 
 #include <iostream>
 #include <cmath> // Для функции sin
-using namespace std;
 
 // Функция для вычисления x^m без использования pow
 double calculatePower(double base, int exponent) {
@@ -38,9 +37,9 @@ int main() {
     for (double x = x_start; x <= x_end; x += x_step) {
         for (int m = 1; m <= 5; ++m) {
             double result = z(x, m);
-            cout << "Значение функции = " << result << " При m = " << m << endl;
+            std::cout << "Значение функции = " << result << " При m = " << m << std::endl;
         }
-        cout << "Вычислено при x = " << x << endl;
+        std::cout << "Вычислено при x = " << x << std::endl;
     }
 
     return 0;

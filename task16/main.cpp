@@ -4,8 +4,6 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main() {
     setlocale(LC_ALL, "rus");
     int choice;
@@ -13,11 +11,11 @@ int main() {
     int height, width;
 
     // Выбор символа
-    cout << "Введите 1 для печати ромба '*'\n";
-    cout << "Введите 2 для печати ромба '+'\n";
-    cout << "Введите 3 для печати ромба '#'\n";
-    cout << "Пожалуйста, введите число 1 - 3: ";
-    cin >> choice;
+    std::cout << "Введите 1 для печати ромба '*'\n";
+    std::cout << "Введите 2 для печати ромба '+'\n";
+    std::cout << "Введите 3 для печати ромба '#'\n";
+    std::cout << "Пожалуйста, введите число 1 - 3: ";
+    std::cin >> choice;
 
     // Определение символа по выбору
     switch (choice) {
@@ -31,19 +29,19 @@ int main() {
         symbol = '#';
         break;
     default:
-        cout << "Неверный выбор символа." << endl;
+        std::cout << "Неверный выбор символа." << std::endl;
         return 1;
     }
 
     // Ввод высоты и ширины
-    cout << "Введите высоту ромба (положительное нечетное число): ";
-    cin >> height;
-    cout << "Введите ширину ромба (положительное нечетное число): ";
-    cin >> width;
+    std::cout << "Введите высоту ромба (положительное нечетное число): ";
+    std::cin >> height;
+    std::cout << "Введите ширину ромба (положительное нечетное число): ";
+    std::cin >> width;
 
     // Проверка на положительность и нечетность
     if (height <= 0 || width <= 0 || height % 2 == 0 || width % 2 == 0) {
-        cout << "Высота и ширина должны быть положительными нечетными числами." << endl;
+        std::cout << "Высота и ширина должны быть положительными нечетными числами." << std::endl;
         return 1;
     }
 
@@ -53,13 +51,13 @@ int main() {
         for (int j = 0; j < width; j++) {
             // Условия для печати символа
             if (j == mid - i || j == mid + i || j == i - mid || j == 3 * mid - i) {
-                cout << symbol;
+                std::cout << symbol;
             }
             else {
-                cout << ' ';
+                std::cout << ' ';
             }
         }
-        cout << endl;
+        std::cout << std::endl;
     }
     system("pause");
     return 0;

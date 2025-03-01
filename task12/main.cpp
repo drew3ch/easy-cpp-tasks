@@ -4,26 +4,24 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main() {
     double X, Y;
 
     // Ввод координат
-    cout << "Введите координату X: ";
-    cin >> X;
-    cout << "Введите координату Y: ";
-    cin >> Y;
+    std::cout << "Введите координату X: ";
+    std::cin >> X;
+    std::cout << "Введите координату Y: ";
+    std::cin >> Y;
 
     // Проверка на принадлежность к четверти
     if (X > 0 && Y > 0) {
-        cout << "I четверть плоскости" << endl;
+        std::cout << "I четверть плоскости" << std::endl;
     } else if (X < 0 && Y > 0) {
-        cout << "II четверть плоскости" << endl;
+        std::cout << "II четверть плоскости" << std::endl;
     } else if (X < 0 && Y < 0) {
-        cout << "III четверть плоскости" << endl;
+        std::cout << "III четверть плоскости" << std::endl;
     } else if (X > 0 && Y < 0) {
-        cout << "IV четверть плоскости" << endl;
+        std::cout << "IV четверть плоскости" << std::endl;
     }
 
     return 0;

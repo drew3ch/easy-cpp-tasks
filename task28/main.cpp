@@ -6,27 +6,26 @@
 
 #include <iostream>
 #include <cmath> // Для использования функции sqrt
-using namespace std;
 
 int main() {
     // Объявление переменных для коэффициентов
     double a, b, c, d, k;
 
     // Ввод коэффициентов для первого уравнения
-    cout << "y = ax^2 + bx + c - первое уравнение. Введите коэффициенты a, b, c" << endl;
-    cout << "a = ";
-    cin >> a;
-    cout << "b = ";
-    cin >> b;
-    cout << "c = ";
-    cin >> c;
+    std::cout << "y = ax^2 + bx + c - первое уравнение. Введите коэффициенты a, b, c" << std::endl;
+    std::cout << "a = ";
+    std::cin >> a;
+    std::cout << "b = ";
+    std::cin >> b;
+    std::cout << "c = ";
+    std::cin >> c;
 
     // Ввод коэффициентов для второго уравнения
-    cout << "y = dx + k - второе уравнение. Введите коэффициенты d, k" << endl;
-    cout << "d = ";
-    cin >> d;
-    cout << "k = ";
-    cin >> k;
+    std::cout << "y = dx + k - второе уравнение. Введите коэффициенты d, k" << std::endl;
+    std::cout << "d = ";
+    std::cin >> d;
+    std::cout << "k = ";
+    std::cin >> k;
 
     // Подстановка второго уравнения в первое
     // Получаем уравнение ax^2 + (b - d)x + (c - k) = 0
@@ -39,7 +38,7 @@ int main() {
 
     // Проверка дискриминанта
     if (discriminant < 0) {
-        cout << "Нет действительных решений." << endl;
+        std::cout << "Нет действительных решений." << std::endl;
     } else {
         // Вычисление корней уравнения
         double x1 = (-B + sqrt(discriminant)) / (2 * A);
@@ -50,9 +49,9 @@ int main() {
         double y2 = d * x2 + k;
 
         // Вывод результатов
-        cout << "Точки пересечения двух данных линий:" << endl;
-        cout << "1: [" << x1 << ", " << y1 << "]" << endl;
-        cout << "2: [" << x2 << ", " << y2 << "]" << endl;
+        std::cout << "Точки пересечения двух данных линий:" << std::endl;
+        std::cout << "1: [" << x1 << ", " << y1 << "]" << std::endl;
+        std::cout << "2: [" << x2 << ", " << y2 << "]" << std::endl;
     }
 
     return 0; // Завершение программы

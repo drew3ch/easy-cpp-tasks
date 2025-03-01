@@ -6,8 +6,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
-
 
 int main()
 {
@@ -25,21 +23,21 @@ int main()
 
 
     for (int i = 0; i < a.size(); i++) //вывод на печать дней недели
-        cout << i + 1 << ". " << a[i] << "\n";
+        std::cout << i + 1 << ". " << a[i] << "\n";
 
 
-    cout << "\nВыберите номер дня недели - "; // ввод пользователем
-    cin >> choise;
-    cout << endl;
+    std::cout << "\nВыберите номер дня недели - "; // ввод пользователем
+    std::cin >> choise;
+    std::cout << std::endl;
 
     if ((!cin) || (choise < 1) || (choise > 7)) { // проверка корректности введеных данных
-        cout << "Вы ввели некорректные данные \n\n";
+        std::cout << "Вы ввели некорректные данные \n\n";
         exit(1);
     }
 
-    cout << a[choise - 1]; // вывод на печать результата
+    std::cout << a[choise - 1]; // вывод на печать результата
 
-    cout << endl << endl;
+    std::cout << std::endl << std::endl;
     system("pause");
     return 0;
 }

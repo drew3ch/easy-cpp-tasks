@@ -1,36 +1,47 @@
-/* 
-Напишите программу, которая позволяет пользователю ввести в консоль три координаты вектора x, y, и z, с основанием у начала координат.
-Вычислите длину этого вектора и выведите её обратно в консоль.
+/*
+Вычислить, не используя функцию pow, значения функции z(x,m) = xm sinm(xm), для значений аргументов:
+
+x от -1.1 до 0.3 с шагом 0.2;
+m от 1 до 5 с шагом 1.
 */
 
 #include <iostream>
-#include <locale>
-#include <cmath>
+#include <cmath> // Для функции sin
+using namespace std;
 
-using std::cout;
-using std::cin;
+// Функция для вычисления x^m без использования pow
+double calculatePower(double base, int exponent) {
+    double result = 1.0;
+    int count = 0;
 
-int main()
-{
-	setlocale(LC_ALL, "Russian");
+    // Используем цикл while для возведения в степень
+    while (count < exponent) {
+        result *= base;
+        count++;
+    }
 
-	double dX(0.0), dY(0.0), dZ(0.0);
-	double dVectorLength(0.0);
+    return result;
+}
 
-	cout << "\n Введите Х: ";
-	cin >> dX;
+// Функция для вычисления z(x, m)
+double z(double x, int m) {
+    return calculatePower(x, m) * sin(m * x);
+}
 
-	cout << "\n Введите Y: ";
-	cin >> dY;
+int main() {
+    // Задаем диапазоны для x и m
+    double x_start = -1.1;
+    double x_end = 0.3;
+    double x_step = 0.2;
 
-	cout << "\n Введите Z: ";
-	cin >> dZ;
+    // Итерация по значениям x
+    for (double x = x_start; x <= x_end; x += x_step) {
+        for (int m = 1; m <= 5; ++m) {
+            double result = z(x, m);
+            cout << "Значение функции = " << result << " При m = " << m << endl;
+        }
+        cout << "Вычислено при x = " << x << endl;
+    }
 
-	cout << "\n Вы ввели следующие числа: X = " << dX << "; Y = " << dY << "; Z = " << dZ;
-
-	dVectorLength = sqrt(pow(dX, 2) + pow(dY, 2) + pow(dZ, 2)); // вычисления модуля (длины) вектора
-
-	cout << "\n Длина вектора: " << dVectorLength << ". \n\n\a";
-	system("pause");
-	return 0;
+    return 0;
 }

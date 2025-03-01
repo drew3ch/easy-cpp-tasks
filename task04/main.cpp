@@ -1,26 +1,28 @@
 /* 
-Организовать ввод двухзначного натурального числа с клавиатуры.
-Программа должна определить наименьшую и наибольшую цифры, которые входят в состав данного натурального числа.
+Напишите программу , в которой по извесной начальной скорости V и времени полета тела T определяется угол aльфа под которым тело брошено по отношению к горизонту (воспользуйтесь соотношением a = arcsin(gT/2V) )
 */
 
 #include <iostream>
-using namespace std;
+#include <cmath>
+ 
 int main()
 {
-    setlocale (LC_ALL, "RUS");
-    int x;
-    std::cout << "Введите двухзначное натуральное число меньше 99: " << "\n";
-    cin >> x; // ввод двухзначного натурального числа, меньше 99
-    int xf = x / 10;
-    int xs = x % 10;
-    if (xf > xs) {
-        cout << xf << " - большая цифра" << endl;
-        cout << xs << " - меньшая цифра" << endl;
-    } else if (xs > xf) {
-        cout << xs << " - большая цифра" << endl;
-        cout << xf << " - меньшая цифра" << endl;
-    } else {
-        cout << "цифры равны" << endl;
+double V, T, param, result;
+const double Pi = asin(1.0), g = 9.8;
+std::cout << " V = ";
+std::cin >> V;
+ 
+std::cout<< std::endl << " T = ";
+std::cin >> T;
+ 
+ if(1 < fabs(g*T/(2*V)))
+        std::cout<<"Incorrect"<< std::endl;
+    else
+    {
+        param = asin(g*T/(2*V));
+        std::cout<<"Ugol = "<<param*(90/Pi)<<std::endl;
     }
-    return 0;
+ 
+system("PAUSE");
+return 0;
 }
